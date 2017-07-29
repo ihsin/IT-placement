@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="info.androidhive.materialtabs">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/it_placements"
+        android:label="IT Placements"
+        android:theme="@style/MyMaterialTheme">
+        <service android:name=".activity.NotificationFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".activity.NotificationFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name=".activity.CustomViewIconTextTabsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CompanyActivity"
+            android:parentActivityName=".activity.CustomViewIconTextTabsActivity"></activity>
+        <activity
+            android:name=".activity.InterviewActivity"
+            android:parentActivityName=".activity.CustomViewIconTextTabsActivity"></activity>
+        <activity
+            android:name=".activity.NewsActivity"
+            android:parentActivityName=".activity.CustomViewIconTextTabsActivity"></activity>
+        <activity
+            android:name=".activity.NotificationListActivity"
+            android:parentActivityName=".activity.CustomViewIconTextTabsActivity"></activity>
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:parentActivityName=".activity.NotificationListActivity"></activity>
+    </application>
+
+</manifest>
