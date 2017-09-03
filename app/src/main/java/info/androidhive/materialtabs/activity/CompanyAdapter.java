@@ -25,14 +25,14 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
     private Context context;
 
 
-    // COMPLETED (3) Create a final private ForecastAdapterOnClickHandler called mClickHandler
+    // COMPLETED (3) Create a final private CompanyAdapterOnClickHandler called mClickHandler
     /*
      * An on-click handler that we've defined to make it easy for an Activity to interface with
      * our RecyclerView
      */
     private final CompanyAdapterOnClickHandler mClickHandler;
 
-    // COMPLETED (1) Add an interface called ForecastAdapterOnClickHandler
+    // COMPLETED (1) Add an interface called CompanyAdapterOnClickHandler
     // COMPLETED (2) Within that interface, define a void method that access a String as a parameter
     /**
      * The interface that receives onClick messages.
